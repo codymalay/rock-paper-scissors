@@ -14,7 +14,6 @@ function convertChoice(computerChoice) {
 // gets player choice and checks validity
 function getPlayerChoice() {
     let playerChoice = prompt("What is your choice?");
-    console.log(playerChoice);
     let firstLetter = playerChoice.charAt(0);
     if (firstLetter == "r" || firstLetter == "R") {
         playerChoice = "Rock";
@@ -41,8 +40,32 @@ function checkAnswer(playerChoice) {
 }
 // a function call that compares player choice vs cpu choice and outputs a string based on the winner of the game
 function playRound(playerChoice, computerChoice) {
-    // use a for loop to condition results for each player choice? Switch case? TBD
-
+    let result;
+    if (playerChoice == "Rock") {
+        if (computerChoice == "Paper") {
+            alert("Paper beats Rock, you lose!");
+        } else if (computerChoice == "Rock") {
+            alert("It's a tie! Try again.");
+        } else if (computerChoice == "Scissors") {
+            alert("Rock beats Scissors. You win!")
+        }
+    } else if (playerChoice == "Paper") {
+        if (computerChoice == "Paper") {
+            alert("It's a tie! Try again.");
+        } else if (computerChoice == "Rock") {
+            alert("Paper Beats Rock. You win!");
+        } else if (computerChoice == "Scissors") {
+            alert("Scissors beats Paper.  You lose!")
+        }
+    } else if (playerChoice == "Scissors") {
+        if (computerChoice == "Paper") {
+            alert("Scissors beats Paper. You win!");
+        } else if (computerChoice == "Rock") {
+            alert("Rock beats paper. You lose!");
+        } else if (computerChoice == "Scissors") {
+            alert("It's a tie! Try again.")
+        }
+    }
 }
 // a game will consist of 5 rounds, winner is the first to win 3 rounds
 function game() {
