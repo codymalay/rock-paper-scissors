@@ -40,34 +40,54 @@ function checkAnswer(playerChoice) {
 }
 // a function call that compares player choice vs cpu choice and outputs a string based on the winner of the game
 function playRound(playerChoice, computerChoice) {
-    let result;
+    let result = 0;
     if (playerChoice == "Rock") {
         if (computerChoice == "Paper") {
             alert("Paper beats Rock, you lose!");
+            result--;
         } else if (computerChoice == "Rock") {
             alert("It's a tie! Try again.");
         } else if (computerChoice == "Scissors") {
             alert("Rock beats Scissors. You win!")
+            result++;
         }
     } else if (playerChoice == "Paper") {
         if (computerChoice == "Paper") {
             alert("It's a tie! Try again.");
         } else if (computerChoice == "Rock") {
             alert("Paper Beats Rock. You win!");
+            result++;
         } else if (computerChoice == "Scissors") {
             alert("Scissors beats Paper.  You lose!")
+            result--;
         }
     } else if (playerChoice == "Scissors") {
         if (computerChoice == "Paper") {
             alert("Scissors beats Paper. You win!");
+            result++;
         } else if (computerChoice == "Rock") {
             alert("Rock beats paper. You lose!");
+            result--;
         } else if (computerChoice == "Scissors") {
             alert("It's a tie! Try again.")
         }
     }
+    return result;
 }
-// a game will consist of 5 rounds, winner is the first to win 3 rounds
+// a game will consist of 5 rounds, the player who has won the most rounds wins the game
 function game() {
-    // 
+    let playerW = 0;
+    let computerW = 0;
+    for (let i=0; i<5; i++) {
+        result = playRound(getPlayerChoice(), getComputerChoice());
+        if (result == 1) {
+            playerW++;
+        } else if (result == -1) {
+            computerW++;
+        }
+        if (playerW == 3 || computerW == 3) {
+            i = 5;
+        }
+        console.log(playerW, computerW);
+    }
 }
