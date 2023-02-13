@@ -90,4 +90,12 @@ function game() {
         }
         console.log(playerW, computerW);
     }
+    if (playerW > computerW) {
+        alert("Congratulations, you beat the computer!")
+    } else if (computerW > playerW) {
+        alert("Sorry, the computer beat you this time.")
+    } else {
+        alert("This game ended in a tie. Try again!")
+    }
 }
+game();
