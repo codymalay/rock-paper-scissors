@@ -97,4 +97,15 @@ function game() {
         alert("This game ended in a tie. Try again!")
     }
 }
+
+/*
+TO DOs
+- remove logic that plays 5 rounds
+
+- add event listener that iterates through buttons and calls playRound, assigning button
+value to playerSelection
+
+- create scoreboard that displays running score, announces winner (first to 5 points)
+*/
+
 game();
