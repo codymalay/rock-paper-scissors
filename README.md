@@ -6,3 +6,7 @@ This is a single-player game of rock paper scissors that pits you against
 
  At the moment this project is strictly written in Javascript. I may revisit
  to add HTML & CSS at a future date.
+
+2.20.23 - ADDING UI
+ Adding a simple UI to this game that will include buttons for the player
+ options and a running scoreboard. 

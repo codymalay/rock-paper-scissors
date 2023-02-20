@@ -88,7 +88,6 @@ function game() {
         if (playerW == 3 || computerW == 3) {
             i = 5;
         }
-        console.log(playerW, computerW);
     }
     if (playerW > computerW) {
         alert("Congratulations, you beat the computer!")
