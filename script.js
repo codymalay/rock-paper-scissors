@@ -74,29 +74,7 @@ function playRound(playerChoice, computerChoice) {
     }
     return result;
 }
-// a game will consist of 5 rounds, the player who has won the most rounds wins the game
-function game() {
-    let playerW = 0;
-    let computerW = 0;
-    for (let i=0; i<5; i++) {
-        result = playRound(getPlayerChoice(), getComputerChoice());
-        if (result == 1) {
-            playerW++;
-        } else if (result == -1) {
-            computerW++;
-        }
-        if (playerW == 3 || computerW == 3) {
-            i = 5;
-        }
-    }
-    if (playerW > computerW) {
-        alert("Congratulations, you beat the computer!")
-    } else if (computerW > playerW) {
-        alert("Sorry, the computer beat you this time.")
-    } else {
-        alert("This game ended in a tie. Try again!")
-    }
-}
+
 
 /*
 TO DOs
@@ -108,4 +86,3 @@ value to playerSelection
 - create scoreboard that displays running score, announces winner (first to 5 points)
 */
 
-game();
