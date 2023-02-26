@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+img {
+    width: 300px;
+    height: auto;
+}
+button {
+    padding: 0;
+    border: 0;
+    margin: 25px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
